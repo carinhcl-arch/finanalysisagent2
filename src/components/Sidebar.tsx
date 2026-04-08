@@ -10,10 +10,10 @@ import {
   MoreOutlined,
   MessageOutlined,
   DownOutlined,
-  SwapOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined
 } from '@ant-design/icons';
+import { Bot, Sparkles } from 'lucide-react';
 
 const { Sider } = Layout;
 const { Title, Text } = Typography;
@@ -36,22 +36,24 @@ export const Sidebar: React.FC<SidebarProps> = ({ onNewChat, collapsed = false, 
       <div className="flex-1 overflow-y-auto flex flex-col">
         <div className={`p-6 flex items-center justify-between mb-2 bg-white ${collapsed ? 'flex-col gap-6 px-0' : ''}`}>
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg overflow-hidden shadow-md shadow-blue-100 shrink-0">
-              <img 
-                src="https://img.freepik.com/free-psd/3d-render-avatar-character_23-2150611731.jpg" 
-                alt="Logo" 
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-              />
+            <div className="w-9 h-9 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-100 shrink-0">
+              <Bot size={20} className="text-white" />
             </div>
-            {!collapsed && <Title level={4} className="m-0! text-[#1a1a1a] font-bold! text-base! tracking-tight whitespace-nowrap">AI 财务分析</Title>}
+            {!collapsed && (
+              <div className="flex flex-col leading-tight">
+                <Title level={4} className="m-0! text-[#1a1a1a] font-bold! text-base! tracking-tight whitespace-nowrap">丰财小精灵</Title>
+                <span className="text-[10px] text-blue-500 font-bold tracking-widest uppercase opacity-70">AI AGENT</span>
+              </div>
+            )}
           </div>
-          <Button 
-            type="text" 
-            icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />} 
-            onClick={onToggle}
-            className={`text-gray-400 hover:text-blue-600 hover:bg-blue-50 transition-all ${collapsed ? 'text-lg' : ''}`}
-          />
+          {!collapsed && (
+            <Button 
+              type="text" 
+              icon={<MenuFoldOutlined />} 
+              onClick={onToggle}
+              className="text-gray-400 hover:text-blue-600 hover:bg-blue-50 transition-all"
+            />
+          )}
         </div>
         
         <div className={`px-4 mb-6 ${collapsed ? 'px-2' : ''}`}>
@@ -60,7 +62,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ onNewChat, collapsed = false, 
             block 
             icon={<PlusOutlined />} 
             onClick={onNewChat}
-            className={`sidebar-new-chat-btn shadow-md shadow-blue-100 h-10! rounded-xl! ${collapsed ? 'w-10 p-0 flex items-center justify-center mx-auto' : ''}`}
+            className={`sidebar-new-chat-btn shadow-md shadow-blue-100 h-10! rounded-xl! bg-gradient-to-r from-blue-600 to-indigo-600 border-none hover:opacity-90! ${collapsed ? 'w-10 p-0 flex items-center justify-center mx-auto' : ''}`}
           >
             {!collapsed && "新对话"}
           </Button>
