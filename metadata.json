@@ -1,0 +1,5 @@
+{
+  "name": "AI 财务分析智能体 (Financial AI Agent)",
+  "description": "面向物流行业财务/经营分析人员，通过 LLM 驱动的一站式数据洞察、报告生成与看板搭建工具。",
+  "requestFramePermissions": []
+}
