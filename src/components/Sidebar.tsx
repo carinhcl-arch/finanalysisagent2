@@ -36,8 +36,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ onNewChat, collapsed = false, 
       <div className="flex-1 overflow-y-auto flex flex-col">
         <div className={`p-6 flex items-center justify-between mb-2 bg-white ${collapsed ? 'flex-col gap-6 px-0' : ''}`}>
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center shadow-md shadow-blue-100 shrink-0">
-              <SwapOutlined className="text-white text-lg rotate-45" />
+            <div className="w-8 h-8 rounded-lg overflow-hidden shadow-md shadow-blue-100 shrink-0">
+              <img 
+                src="https://img.freepik.com/free-psd/3d-render-avatar-character_23-2150611731.jpg" 
+                alt="Logo" 
+                className="w-full h-full object-cover"
+                referrerPolicy="no-referrer"
+              />
             </div>
             {!collapsed && <Title level={4} className="m-0! text-[#1a1a1a] font-bold! text-base! tracking-tight whitespace-nowrap">AI 财务分析</Title>}
           </div>

@@ -21,10 +21,15 @@ export const TopHeader: React.FC = () => {
     >
       <div className="flex items-center gap-10">
         <div className="flex items-center gap-2.5 cursor-pointer group">
-          <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center shadow-md shadow-blue-100 group-hover:scale-105 transition-transform">
-            <SwapOutlined className="text-white text-lg rotate-45" />
+          <div className="w-8 h-8 rounded-lg overflow-hidden shadow-md shadow-blue-100 group-hover:scale-105 transition-transform">
+            <img 
+              src="https://img.freepik.com/free-psd/3d-render-avatar-character_23-2150611731.jpg" 
+              alt="Logo" 
+              className="w-full h-full object-cover"
+              referrerPolicy="no-referrer"
+            />
           </div>
-          <span className="text-lg font-bold text-[#1a1a1a] tracking-tight">智控平台</span>
+          <span className="text-lg font-bold text-[#1a1a1a] tracking-tight">丰财智控</span>
           <div className="w-px h-4 bg-gray-200 mx-1" />
           <span className="text-xs text-gray-400 font-medium">企业级 AI 助手</span>
         </div>
@@ -36,8 +41,20 @@ export const TopHeader: React.FC = () => {
           className="border-none h-14 flex items-center bg-transparent"
           style={{ lineHeight: '56px', background: 'transparent' }}
           items={[
-            { key: '1', label: <span className="px-2">智控首页</span> },
-            { key: '2', label: <span className="px-2">...</span> },
+            { 
+              key: '1', 
+              label: (
+                <div className="flex items-center gap-2 px-2 group/nav">
+                  <span className="font-bold text-blue-600 relative">
+                    丰财小精灵
+                    <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600 rounded-full transform scale-x-100 transition-transform" />
+                  </span>
+                  <div className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)] animate-pulse" />
+                </div>
+              ) 
+            },
+            { key: '2', label: <span className="px-2 text-gray-500 hover:text-blue-600 transition-colors">数据工作台</span> },
+            { key: '3', label: <span className="px-2 text-gray-500 hover:text-blue-600 transition-colors">智能看板</span> },
           ]}
         />
       </div>

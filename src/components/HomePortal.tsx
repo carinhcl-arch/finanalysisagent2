@@ -56,7 +56,7 @@ export const HomePortal: React.FC<HomePortalProps> = ({
               洞察数字背后的<span className="text-blue-600">经营真相</span>
             </Title>
             <Paragraph className="text-2xl text-gray-500 font-normal max-w-4xl mx-auto">
-              您好，我是您的财务分析助手，全面支持您从数据到决策。
+              您好，我是<span className="text-blue-600 font-bold">丰财小精灵</span>，您的专属财务分析助手。
             </Paragraph>
           </motion.div>
         </div>

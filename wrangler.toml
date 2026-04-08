@@ -1,0 +1,7 @@
+name = "ai-financial-analysis"
+compatibility_date = "2026-04-08"
+pages_build_output_dir = "dist"
+
+[vars]
+# Add your environment variables here
+# VITE_GEMINI_API_KEY = ""
